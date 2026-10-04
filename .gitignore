@@ -1,0 +1,19 @@
+# Flipper Zero NFC dumps → Proxmark3 / magic CUID cards
+# =====================================================
+#
+# Real card dumps contain UID + data that could identify their owner.
+# They must NEVER be committed. The .bin files produced by these
+# scripts are byte-for-byte equivalent to the source .nfc files.
+
+# Flipper Zero captures (raw input)
+*.nfc
+
+# Proxmark3 + script output (raw binary dumps, JSON dumps, keys, logs)
+*.bin
+*.json
+hf-mf-*-key.bin
+dump_*.log
+dump_*.bin.json
+
+# Anything in a dedicated dump subtree of the repo
+ProxmarkDumps/dumps/
